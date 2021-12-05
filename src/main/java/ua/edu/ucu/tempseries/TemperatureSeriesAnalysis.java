@@ -1,23 +1,22 @@
 package ua.edu.ucu.tempseries;
 
-
 public class TemperatureSeriesAnalysis {
     private double[] temperatureSeries;
     int length;
 
     public TemperatureSeriesAnalysis() {
         temperatureSeries = new double[]{};
-        length = temperatureSeries.length;
+        length=temperatureSeries.length;
     }
 
     public TemperatureSeriesAnalysis(double[] temperatureSeries) {
-        for (double temperature : temperatureSeries) {
-            if (temperature < -273) {
+        for (double temperature:temperatureSeries) {
+            if (temperature<-273) {
                 throw new IllegalArgumentException(Double.toString(temperature));
             }
         }
-        this.temperatureSeries = temperatureSeries;
-        this.length = temperatureSeries.length;
+        this.temperatureSeries=temperatureSeries;
+        this.length=temperatureSeries.length;
     }
 
     public double[] getTemperatureSeries() {
@@ -25,24 +24,24 @@ public class TemperatureSeriesAnalysis {
     }
 
     public double average() {
-        if (length == 0){
+        if (length==0){
             throw new IllegalArgumentException(temperatureSeries.toString());
         }
-        double sum = 0;
-        for (int i = 0; i < length; i++) {
-            sum += temperatureSeries[i];
+        double sum=0;
+        for (int i=0;i<length;i++) {
+            sum+=temperatureSeries[i];
         }
         return sum/length;
     }
 
     public double deviation() {
-        if (length == 0){
+        if (length==0){
             throw new IllegalArgumentException(temperatureSeries.toString());
         }
         double sd = 0;
         double sum = average();
-        for (int i = 0; i < length; i++) {
-            sd += Math.pow(temperatureSeries[i]-sum, 2);
+        for (int i=0; i<length;i++) {
+            sd+=Math.pow(temperatureSeries[i]-sum, 2);
         }
         return Math.sqrt(sd);
     }
@@ -51,10 +50,10 @@ public class TemperatureSeriesAnalysis {
         if (length == 0){
             throw new IllegalArgumentException(temperatureSeries.toString());
         }
-        double min = Integer.MAX_VALUE;
-        for (int i = 0; i < length; i++) {
+        double min=Integer.MAX_VALUE;
+        for (int i=0; i<length; i++) {
             if (temperatureSeries[i] < min){
-                min = temperatureSeries[i];
+                min=temperatureSeries[i];
             }
         }
         return min;
