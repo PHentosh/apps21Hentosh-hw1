@@ -19,32 +19,16 @@ public class TempSummaryStatistics {
         this.maxTemp = maxTemp;
     }
 
-    public double getAvgTemp() {
-        return avgTemp;
-    }
-
     public void setAvgTemp(double avg) {
         this.avgTemp = avg;
-    }
-
-    public double getDevTemp() {
-        return devTemp;
     }
 
     public void setDevTemp(double dev) {
         this.devTemp = dev;
     }
 
-    public double getMinTemp() {
-        return minTemp;
-    }
-
     public void setMinTemp(double min) {
         this.minTemp = min;
-    }
-
-    public double getMaxTemp() {
-        return maxTemp;
     }
 
     public void setMaxTemp(double max) {
@@ -64,10 +48,5 @@ public class TempSummaryStatistics {
                 && Double.compare(that.devTemp, devTemp) == 0
                 && Double.compare(that.minTemp, minTemp) == 0
                 && Double.compare(that.maxTemp, maxTemp) == 0;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(avgTemp, devTemp, minTemp, maxTemp);
     }
 }
