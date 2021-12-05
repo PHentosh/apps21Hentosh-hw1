@@ -53,11 +53,17 @@ public class TempSummaryStatistics {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {return true;}
-        if (o == null || getClass() != o.getClass()) {return false;}
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TempSummaryStatistics that = (TempSummaryStatistics) o;
-        return Double.compare(that.avgTemp, avgTemp) == 0 &&
-                Double.compare(that.devTemp, devTemp) == 0 && Double.compare(that.minTemp, minTemp) == 0 && Double.compare(that.maxTemp, maxTemp) == 0;
+        return Double.compare(that.avgTemp, avgTemp) == 0
+                && Double.compare(that.devTemp, devTemp) == 0
+                && Double.compare(that.minTemp, minTemp) == 0
+                && Double.compare(that.maxTemp, maxTemp) == 0;
     }
 
     @Override

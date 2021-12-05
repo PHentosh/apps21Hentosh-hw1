@@ -89,8 +89,8 @@ public class TemperatureSeriesAnalysis {
             if (Math.abs(temperatureSeries[i] - tempValue) < minDist) {
                 minDist = Math.abs(temperatureSeries[i] - tempValue);
                 el = i;
-            } else if(Math.abs(temperatureSeries[i] - tempValue) == minDist) {
-                if (temperatureSeries[i] > 0){
+            } else if (Math.abs(temperatureSeries[i] - tempValue) == minDist) {
+                if (temperatureSeries[i] > 0) {
                     el = i;
                 }
             }
@@ -113,7 +113,7 @@ public class TemperatureSeriesAnalysis {
             return lestemp;
         }
         num = 0;
-        for (int i =0; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             if (temperatureSeries[i] < tempValue) {
                 lestemp[num] = temperatureSeries[i];
                 num++;
@@ -138,7 +138,7 @@ public class TemperatureSeriesAnalysis {
             return lestemp;
         }
         num = 0;
-        for (int i =0; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             if (temperatureSeries[i] >= tempValue) {
                 lestemp[num] = temperatureSeries[i];
                 num++;
@@ -163,7 +163,7 @@ public class TemperatureSeriesAnalysis {
 
         if (length + temps.length > temperatureSeries.length) {
             int len;
-            if (length == 0){
+            if (length == 0) {
                 len = 1;
             } else {
                 len = length;
