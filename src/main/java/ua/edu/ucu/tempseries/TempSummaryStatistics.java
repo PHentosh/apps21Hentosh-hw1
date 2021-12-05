@@ -1,6 +1,5 @@
 package ua.edu.ucu.tempseries;
 
-import java.util.Objects;
 
 public class TempSummaryStatistics {
     private double avgTemp;
