@@ -1,10 +1,7 @@
 package ua.edu.ucu.tempseries;
 
 public class TemperatureSeriesAnalysis {
-
-    public TemperatureSeriesAnalysis() {
-
-    }
+    
 
     public TemperatureSeriesAnalysis(double[] temperatureSeries) {
 
