@@ -263,4 +263,15 @@ public class TemperatureSeriesAnalysisTest {
         assertArrayEquals(expResult, actualResult, 0.00001);
     }
 
+    @Test
+    public void testStatisticEq(){
+        double[] temperatureSeries = {3.0, -5.0, 1.0, 5.0};
+        TemperatureSeriesAnalysis seriesAnalysis = new TemperatureSeriesAnalysis(temperatureSeries);
+
+        TempSummaryStatistics stat = seriesAnalysis.summaryStatistics();
+
+        assertTrue(stat.equals(stat));
+        assertFalse(stat.equals(1));
+    }
+
 }
