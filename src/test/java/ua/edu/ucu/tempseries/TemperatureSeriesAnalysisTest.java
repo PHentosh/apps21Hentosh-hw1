@@ -221,7 +221,7 @@ public class TemperatureSeriesAnalysisTest {
         TemperatureSeriesAnalysis seriesAnalysis = new TemperatureSeriesAnalysis(temperatureSeries);
         double[] expResult = {};
 
-        double[] actualResult = seriesAnalysis.findTempsLessThen(6.0);
+        double[] actualResult = seriesAnalysis.findTempsGreaterThen(6.0);
 
         assertArrayEquals(expResult, actualResult, 0.00001);
     }
